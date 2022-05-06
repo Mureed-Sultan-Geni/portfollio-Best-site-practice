@@ -2,20 +2,35 @@
   margin: 0;
   padding: 0;
 }
+
 img {
   width: 100%;
   height: 100%;
 }
+
 #home {
   margin-left: 11rem;
   /* height: 450vh !important; */
 }
-#about {
-  margin-left: 11rem;
-}
+
 .menu {
   padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  a{
+    border: 1px solid silver;
+    padding:10px 20px;
+    margin:5px 10px;
+  }
+  a:hover{
+    background-color: aqua;
+    transition: 500ms;
+    color:black;
+    font-weight: bold;
+  }
 }
+
 .top-nav {
   width: 10rem;
   display: flex;
@@ -26,12 +41,14 @@ img {
   position: fixed;
   background-color: #181818;
   z-index: 10;
+
   a {
     color: gray;
     text-decoration: none;
     text-align: center;
   }
 }
+
 #portfolio-home {
   width: 100vw;
   height: 100vh;
@@ -40,17 +57,21 @@ img {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .intro {
   padding-top: 8rem;
   margin-left: 5rem;
+
   p {
     font-size: 4rem;
     cursor: pointer;
     margin: 0;
   }
+
   span:hover {
     animation: opac-change 1s ease-in-out infinite alternate;
   }
+
   .contact-button {
     padding: 10px 30px;
     background: none;
@@ -58,35 +79,43 @@ img {
     border: 1px solid aqua;
     font-weight: bold;
   }
+
   .contact-button:hover {
     background: #08fdd8;
     color: white;
     transition: ease-in-out 500ms;
   }
 }
+
 #my-portfolio {
   p:first-child {
     margin-left: 5rem;
     margin-top: 5rem;
+
     span {
       font-size: 4rem;
       cursor: none;
     }
+
     span:hover {
       animation: opac-change 1s ease-in-out infinite alternate;
     }
   }
+
   .gallery {
     display: flex;
     flex-wrap: wrap;
+
     img {
       width: 15rem;
       height: 10rem;
       margin: 1rem;
     }
+
     .box1 {
       position: relative;
     }
+
     p {
       position: absolute;
       top: 5rem;
@@ -96,9 +125,11 @@ img {
       font-weight: bold;
       font-size: 15px;
     }
+
     img:hover {
       opacity: 0.5;
       transition: 1s;
+
       p {
         z-index: 5;
         opacity: 1;
@@ -106,10 +137,12 @@ img {
     }
   }
 }
+
 #myself {
   display: flex;
   width: 95vw;
   margin: auto;
+
   p:first-child {
     font-size: 4rem;
     cursor: pointer;
@@ -120,17 +153,20 @@ img {
       animation: opac-change 1s ease-in-out infinite alternate;
     }
   }
+
   .text-intro {
     max-width: 45%;
     padding: 0 1.5rem 0 0;
     width: 100%;
     text-align: justify;
   }
+
   .img-intro {
     max-width: 40%;
     width: 100%;
   }
 }
+
 #contactme {
   display: flex;
   margin-top: 5rem;
@@ -138,15 +174,18 @@ img {
   .contact-input {
     max-width: 40vw;
     padding: 0 20px 0 0;
+
     p:first-child {
       font-size: 4rem;
       cursor: pointer;
       color: aqua;
       font-weight: bold;
+
       span:hover {
         animation: opac-change 1s ease-in-out infinite alternate;
       }
     }
+
     .input-area {
       input:first-child {
         max-width: 99%;
@@ -158,10 +197,12 @@ img {
         font-weight: bold;
         outline: none;
       }
-       input:first-child:focus {
+
+      input:first-child:focus {
         color: red;
         border-bottom: 2px solid aqua;
       }
+
       textarea {
         max-width: 99%;
         margin-top: 0.5rem;
@@ -173,11 +214,13 @@ img {
         outline: none;
 
       }
-      textarea:focus{
+
+      textarea:focus {
         color: red;
         border-bottom: 2px solid aqua;
       }
     }
+
     .first-fields {
       input {
         margin-top: 0.5rem;
@@ -189,11 +232,13 @@ img {
         font-weight: bold;
         outline: none;
       }
+
       input:focus-visible {
         color: red;
         border-bottom: 2px solid aqua;
       }
     }
+
     button {
       background: none;
       border: 1px solid green;
@@ -201,30 +246,71 @@ img {
       color: green;
       font-weight: bold;
     }
+
     button:hover {
       background-color: green;
       color: white;
       transition: 0.5s;
     }
   }
+
   .maps {
     width: 40vw;
+
     iframe {
       width: 100%;
     }
   }
 }
+
 /* animation  */
 @keyframes opac-change {
   0% {
     opacity: 0.2;
     color: gray;
   }
+
   50% {
     color: pink;
   }
+
   100% {
     opacity: 1;
     color: red;
+  }
+}
+
+/* About page start here  */
+
+#about {
+  margin-left: 11rem;
+
+  #about-component {
+    display: flex;
+    height: 100vh;
+    padding-left:2rem;
+    background-image: linear-gradient(#413D90, #3C3986);
+
+    .about-text {
+      max-width: 50vw;
+      width: 100%;
+      text-align: justify;
+      padding: 0 5rem 0 0;
+
+      p:first-child {
+        margin: 11rem 0 3rem 0;
+
+      }
+
+      span {
+        font-size: 4rem;
+        cursor: none;
+        color: aqua;
+      }
+
+      span:hover {
+        animation: opac-change 1s ease-in-out infinite alternate;
+      }
+    }
   }
 }
