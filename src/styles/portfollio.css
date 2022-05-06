@@ -51,7 +51,7 @@ img {
 
 #portfolio-home {
   width: 100vw;
-  height: 100vh;
+  height: 45rem;
 
   background-image: url(../images/pic-02.jpg);
   background-repeat: no-repeat;
@@ -178,6 +178,7 @@ img {
   .img-intro {
     max-width: 40%;
     width: 100%;
+    height: 170px;
   }
 }
 
@@ -428,17 +429,56 @@ img {
   }
 }
 /* Media querries  */
-/* @media (max-width:800px){
+@media (max-width:800px){
+  #portfolio-home{
+    .intro{
+      p{
+        font-size: 2em;
+      }
+    }
+  }
+  #my-portfolio{
+    p{
+      text-align:center;
+    }
+    .gallery{
+      align-items: center;
+      justify-content: center;
+    }
+  }
   #myself{
     display: block;
+    width: fit-content;
     .text-intro{
       max-width: 100%;
+      text-align:center;
+      width:100%;
+      p{
+        max-width: ;
+      }
+    }
+    .img-intro{
+      max-width: 30vw;
+      width: 100%;
+      margin: auto;
     }
   }
   #contactme{
-    display: block;
+  flex-direction: column;
     .contact-input{
       max-width: 100%;
     }
   }
-} */
+}
+@media (max-width:900px) {
+  #about-component{
+    flex-direction: column;
+    height: auto !important;
+    .about-text{
+      max-width: 100% !important;
+    }
+  }
+  #myskill{
+    flex-direction: column;
+  }
+}
