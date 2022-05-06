@@ -8,6 +8,8 @@ import home from './pages/home.js';
 export default function() {
   addPage('', home);
   addPaths('site', [
-    'about'
+    'about',
+    'skills',
+    'contactme'
   ]);
 }
