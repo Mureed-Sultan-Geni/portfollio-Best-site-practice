@@ -57,15 +57,16 @@ img {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 .intro {
   padding-top: 8rem;
   margin-left: 5rem;
-
   p {
     font-size: 4rem;
     cursor: pointer;
-    margin: 0;
+    margin: 0;    
+    animation:render 2s alternate forwards ;
+    animation-delay: 2s;
+    opacity: 0;
   }
 
   span:hover {
@@ -86,11 +87,21 @@ img {
     transition: ease-in-out 500ms;
   }
 }
-
+@keyframes opac-render {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
 #my-portfolio {
   p:first-child {
-    margin-left: 5rem;
+    margin-left:1rem;
     margin-top: 5rem;
+    opacity: 0;
+    animation: opac-render 2s alternate forwards;
+    animation-delay:3s;
 
     span {
       font-size: 4rem;
@@ -142,6 +153,9 @@ img {
   display: flex;
   width: 95vw;
   margin: auto;
+  opacity: 0;
+  animation: opac-render 2s alternate forwards;
+  animation-delay: 1s;
 
   p:first-child {
     font-size: 4rem;
@@ -174,6 +188,9 @@ img {
   .contact-input {
     max-width: 40vw;
     padding: 0 20px 0 0;
+    opacity: 0;
+    animation: opac-render 2s alternate forwards;
+    animation-delay: 1s;
 
     p:first-child {
       font-size: 4rem;
@@ -255,6 +272,9 @@ img {
 
   .maps {
     width: 40vw;
+    opacity: 0;
+    animation: opac-render 2s alternate forwards;
+    animation-delay: 2s;
 
     iframe {
       width: 100%;
@@ -272,6 +292,9 @@ img {
     height: 100vh;
     padding-left: 2rem;
     background-image: linear-gradient(#413d90, #3c3986);
+    opacity: 0;
+    animation: opac-render 2s alternate forwards;
+    animation-delay: 1s;
 
     .about-text {
       max-width: 50vw;
@@ -300,6 +323,9 @@ img {
   margin-top: 10rem;
   #myskill {
     display: flex;
+    opacity: 0;
+    animation: opac-render 2s alternate forwards;
+    animation-delay: 1s;
     .skill-details {
       max-width: 49vw;
       width: 100%;
@@ -380,6 +406,25 @@ img {
   }
   100% {
     background-position: 0;
+  }
+}
+@keyframes render {
+  from{
+    opacity: 0;
+    transform: rotate(360deg);
+  }
+  to{
+    opacity: 1;
+    transform: rotate(0deg);
+
+  }
+}
+@keyframes opac-render {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
   }
 }
 /* Media querries  */
