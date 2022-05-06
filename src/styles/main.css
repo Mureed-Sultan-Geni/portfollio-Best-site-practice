@@ -16,3 +16,6 @@
 @import 'sections/intro';
 
 @import 'html5bp/last';
+
+/* adding extra sheet  */
+@import 'portfollio.css';
